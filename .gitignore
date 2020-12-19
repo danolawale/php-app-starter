@@ -1,0 +1,4 @@
+.env
+src/vendor
+src/.phpunit.result.cache
+
