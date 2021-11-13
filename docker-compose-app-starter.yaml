@@ -26,9 +26,8 @@ services:
             - ${WEB_HOST}:8080:80
         restart: unless-stopped
         volumes:
-            - ./src:/var/www/app/src
-            - ./.env:/var/www/app/.env
-            - ./site.conf:/etc/nginx/conf.d/default.conf
+            - ./src:/var/www
+            - .:/etc/nginx/conf.d
         links:
             - php-app-starter
         depends_on:
@@ -42,7 +41,7 @@ services:
         container_name: php-app-starter
         restart: unless-stopped
         volumes:
-            - ./src:/src
+            - ./src:/var/www
 volumes:
   mysql_data:
     driver: local

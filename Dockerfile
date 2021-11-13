@@ -14,12 +14,12 @@ RUN curl -sS https://getcomposer.org/download/2.0.7/composer.phar -o /usr/local/
     && chmod +x /usr/local/bin/composer
 
 #create files
-RUN mkdir -p /var/www/app/src
-RUN touch /var/www/app/.env
+#RUN mkdir -p /var/www/app/src
+#RUN touch /var/www/app/.env
 
 #copy files into dev folder
-ADD ./src /var/www/app/src
-ADD ./.env  /var/www/app/.env
+#ADD ./src /var/www/app/src
+#ADD ./.env  /var/www/app/.env
 
 #create user account
 RUN useradd -m -s /bin/bash $user
@@ -27,4 +27,4 @@ RUN chown -R $user:$user /var/www
 
 USER $user
 
-WORKDIR /var/www/app
+WORKDIR /var/www

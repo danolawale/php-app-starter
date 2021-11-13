@@ -1,7 +1,6 @@
-<?php require __DIR__.'/../vendor/autoload.php'; ?>
-
-
 <?php
+    require __DIR__.'/../vendor/autoload.php';
+
     $usersRepo = \Library\Model\Entity\UserAccount::getRepository();
 
     $users = $usersRepo::fetchAllUsers(\Library\Model\Entity\UserAccount::class);

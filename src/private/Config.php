@@ -1,6 +1,6 @@
 <?php
 
-$envDir = dirname(dirname(__DIR__));
+$envDir = dirname(__DIR__);
 
 $dotenv = Dotenv\Dotenv::createImmutable($envDir);
 $dotenv->load();
